@@ -1,5 +1,5 @@
 const container = document.querySelector('#container');
-
+const btn = document.querySelector('#gridSize');
 let num = 16;
 
 const squareSize = (960/num);
@@ -23,27 +23,18 @@ function fillPixel() {
     });
 }
 
-// function popUp() {
-//     const getNum = document.createElement('div');
-//     getNum.classList.add('popUp');
-    
-//     const popText = document.createElement('p');
-//     p.textContent = "Enter the number of squares per side you want."
-//     getNum.appendChild(p);
-
-//     const field = document.createElement('input');
-//     field.type = 'number';
-//     getNum.appendChild(field);
-
-//     container.appendChild(getNum);
-// }
 
 function changeGrid() {
-    const btn = document.querySelector('#gridSize');
     btn.addEventListener(('click'), () => {
         const popUp = document.querySelector('#popUp');
         popUp.classList.add('vis');
     });
+    const submit = document.querySelector('sub');
+    submit.addEventListener(('click'), () => {
+        num = parseInt(document.getElementById('#number').value);
+    });
+    popUp.classList.remove('vis');
+    play();
 }
 
 // function popUp() {
