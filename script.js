@@ -38,20 +38,23 @@ function fillPixel() {
 //     container.appendChild(getNum);
 // }
 
-function popUp() {
-    const popUp = document.querySelector('#popUp');
-    popUp.classList.add('vis');
-}
-
 function changeGrid() {
     const btn = document.querySelector('#gridSize');
-    btn.addEventListener(('click'), popUp());
+    btn.addEventListener(('click'), () => {
+        const popUp = document.querySelector('#popUp');
+        popUp.classList.add('vis');
+    });
 }
+
+// function popUp() {
+//     const popUp = document.querySelector('#popUp');
+//     popUp.classList.add('vis');
+// }
 
 function play() {
     addGrid();
     fillPixel();
-    changeGrid();
 }
 
 window.addEventListener('load', play());
+changeGrid();

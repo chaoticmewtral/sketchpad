@@ -29,3 +29,8 @@ body {
 #popUp {
     display: none;
 }
+
+#popUp.vis {
+    display: block;
+    position: fixed;
+}
