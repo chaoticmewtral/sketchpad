@@ -1,7 +1,7 @@
 const container = document.querySelector('#container');
 const btn = document.querySelector('#gridSize');
-const submit = document.querySelector('#popUp');
-let num = 16;
+const submit = document.querySelector('#sub');
+let num = parseInt(document.getElementById('#number').value);
 
 const squareSize = (960/num);
 
@@ -24,15 +24,15 @@ function fillPixel() {
     });
 }
 
+function showPopUp() {
+    popUp.classList.add('vis');
+}
+
+btn.addEventListener(('click'), showPopUp());
+
+submit.addEventListener(('click'), changeGrid());
 
 function changeGrid() {
-    btn.addEventListener(('click'), () => {
-        popUp.classList.add('vis');
-    });
-    const submit = document.querySelector('sub');
-    submit.addEventListener(('click'), () => {
-        num = parseInt(document.getElementById('#number').value);
-    });
     popUp.classList.remove('vis');
     play();
 }
