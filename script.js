@@ -1,5 +1,6 @@
 const container = document.querySelector('#container');
 const btn = document.querySelector('#gridSize');
+const submit = document.querySelector('#popUp');
 let num = 16;
 
 const squareSize = (960/num);
@@ -26,7 +27,6 @@ function fillPixel() {
 
 function changeGrid() {
     btn.addEventListener(('click'), () => {
-        const popUp = document.querySelector('#popUp');
         popUp.classList.add('vis');
     });
     const submit = document.querySelector('sub');
@@ -37,15 +37,9 @@ function changeGrid() {
     play();
 }
 
-// function popUp() {
-//     const popUp = document.querySelector('#popUp');
-//     popUp.classList.add('vis');
-// }
-
 function play() {
     addGrid();
     fillPixel();
 }
 
 window.addEventListener('load', play());
-changeGrid();
