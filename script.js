@@ -23,6 +23,24 @@ function fillPixel() {
     });
 }
 
+function popUp() {
+    const getNum = document.createElement('div');
+    getNum.classList.add('popUp');
+    
+    const popText = document.createElement('p');
+    p.textContent = "Enter the number of squares per side you want."
+    getNum.appendChild(p);
+
+    const field = document.createElement('input');
+    field.type = 'number';
+    
+}
+
+function changeGrid() {
+    const btn = document.querySelector('#gridSize');
+    btn.addEventListener(('click'), popUp());
+}
+
 function play() {
     addGrid();
     fillPixel();
