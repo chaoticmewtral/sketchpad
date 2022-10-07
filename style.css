@@ -1,11 +1,21 @@
+body {
+    align-items: center;
+}
+
 #container {
     width: 960px;
     height: 960px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(auto, auto));
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    border: 1px solid black;
 }
 
 .square {
     box-sizing: border-box;
     border: 1px solid black;
+}
+
+.square:hover {
+    background-color: black;
 }
