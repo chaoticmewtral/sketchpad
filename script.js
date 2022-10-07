@@ -23,17 +23,24 @@ function fillPixel() {
     });
 }
 
-function popUp() {
-    const getNum = document.createElement('div');
-    getNum.classList.add('popUp');
+// function popUp() {
+//     const getNum = document.createElement('div');
+//     getNum.classList.add('popUp');
     
-    const popText = document.createElement('p');
-    p.textContent = "Enter the number of squares per side you want."
-    getNum.appendChild(p);
+//     const popText = document.createElement('p');
+//     p.textContent = "Enter the number of squares per side you want."
+//     getNum.appendChild(p);
 
-    const field = document.createElement('input');
-    field.type = 'number';
-    
+//     const field = document.createElement('input');
+//     field.type = 'number';
+//     getNum.appendChild(field);
+
+//     container.appendChild(getNum);
+// }
+
+function popUp() {
+    const popUp = document.querySelector('#popUp');
+    popUp.classList.add('vis');
 }
 
 function changeGrid() {
@@ -44,6 +51,7 @@ function changeGrid() {
 function play() {
     addGrid();
     fillPixel();
+    changeGrid();
 }
 
 window.addEventListener('load', play());

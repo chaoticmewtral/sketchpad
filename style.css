@@ -25,3 +25,7 @@ body {
 .fillPixel {
     background-color: black;
 }
+
+#popUp {
+    display: none;
+}
