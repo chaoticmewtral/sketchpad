@@ -12,6 +12,3 @@ const squareSize = (960/num);
         container.appendChild(square);
     }
 
-
-
-// assign size attribute based on num
