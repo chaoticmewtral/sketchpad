@@ -2,12 +2,13 @@ const container = document.querySelector('#container');
 const btn = document.querySelector('#gridSize');
 const submit = document.querySelector('#sub');
 const popUp = document.querySelector('#popUp');
-let num = 16;
+document.querySelector('#number').defaultValue = 16;
 
-const squareSize = (960/num);
+let num = document.querySelector('#number').value;
 
 function addGrid() {
     for (let i=0; i < (num ** 2); i++) {
+        const squareSize = (960/num);
         const square = document.createElement('div');
         square.classList.add('square');
         square.style.height = squareSize + 'px';
@@ -25,11 +26,16 @@ function fillPixel() {
     });
 }
 
-function showPopUp() {
-    popUp.classList.add('vis');
-}
+btn.addEventListener(('click'), e => {
+    popUp.classList.toggle('vis');
+});
 
-// btn.addEventListener(('click'), showPopUp());
+submit.addEventListener(('click'), e => {
+    popUp.classList.toggle('vis');
+    container.replaceChildren();
+    num = document.querySelector('#number').value;
+    play();
+})
 
 // submit.addEventListener(('click'), changeGrid());
 
