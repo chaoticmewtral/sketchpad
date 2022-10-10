@@ -25,10 +25,13 @@ function fillPixel() {
         });
     });
 }
+// show popUp window to change grid size
 
 btn.addEventListener(('click'), e => {
     popUp.classList.toggle('vis');
 });
+
+// replace grid with new grid based on selected number of squares
 
 submit.addEventListener(('click'), e => {
     popUp.classList.toggle('vis');
@@ -36,9 +39,6 @@ submit.addEventListener(('click'), e => {
     num = document.querySelector('#number').value;
     play();
 })
-
-// submit.addEventListener(('click'), changeGrid());
-
 
 
 function play() {
